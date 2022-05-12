@@ -87,6 +87,10 @@ private: // Functions
 
   class vtkInternal;
   vtkInternal* Internal;
+
+public:
+  /*!  */
+  PlusStatus GetInternal(vtkInternal*& i);
 };
 
 #endif

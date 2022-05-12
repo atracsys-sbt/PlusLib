@@ -620,6 +620,14 @@ AtracsysTracker::ATRACSYS_RESULT AtracsysTracker::SetOption(const std::string& o
   return SUCCESS;
 }
 
+AtracsysTracker::ATRACSYS_RESULT AtracsysTracker::GetLibHandle(ftkLibrary& lib)
+{
+  if (this->Internal->FtkLib == nullptr)
+    return ERROR_UNABLE_TO_GET_FTK_HANDLE;
+  lib = this->Internal->FtkLib;
+  return SUCCESS;
+}
+
 // ------------------------------------------
 // universally available options & methods
 // ------------------------------------------

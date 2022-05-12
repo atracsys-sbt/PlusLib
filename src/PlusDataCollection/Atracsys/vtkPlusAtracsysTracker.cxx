@@ -682,3 +682,13 @@ PlusStatus vtkPlusAtracsysTracker::SetVideoEnabled(bool enabled)
   // not implemented yet
   return PLUS_FAIL;
 }
+
+PlusStatus vtkPlusAtracsysTracker::GetInternal(vtkInternal*& i)
+{
+  if (this->Internal == nullptr)
+  {
+    return PLUS_FAIL;
+  }
+  i = this->Internal;
+  return PLUS_SUCCESS;
+}

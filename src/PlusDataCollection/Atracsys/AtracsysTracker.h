@@ -11,6 +11,8 @@ See License.txt for details.
 #include <vector>
 #include <vtkNew.h>
 
+struct ftkLibraryImp;
+typedef ftkLibraryImp* ftkLibrary;
 struct ftkOptionsInfo;
 class vtkMatrix4x4;
 
@@ -191,6 +193,8 @@ public:
   ATRACSYS_RESULT ResetLostFrameCount();
 
   ATRACSYS_RESULT SetOption(const std::string&, const std::string&);
+
+  ATRACSYS_RESULT GetLibHandle(ftkLibrary& lib);
 
 protected:
   bool GetOptionInfo(const std::string&, const ftkOptionsInfo*&);
